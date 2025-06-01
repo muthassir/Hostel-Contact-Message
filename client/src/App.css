@@ -1,0 +1,174 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.App {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+input, textarea, button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  background-color: #25D366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1DA851;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+.header{
+  background-color: #1DA851;
+  width: 100vw;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input, textarea, select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input[type="text"], input[type="tel"], select {
+  flex: 1;
+  min-width: 150px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.contact-list {
+  margin: 20px 0;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.contact div {
+  display: flex;
+  gap: 10px;
+}
+
+.message-form {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #9e9292;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.message-form label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #666;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #444;
+}
+
+
+/* Custom DaisyUI list styles for contact list */
+.contact-list-item {
+  @apply flex items-center justify-between p-4 bg-base-200 rounded-lg mb-2 hover:bg-base-300 transition-colors duration-200 border border-base-300;
+}
+
+.contact-list-item .contact-info {
+  @apply flex items-center space-x-4 text-base-content;
+}
+
+.contact-list-item .contact-actions {
+  @apply flex space-x-2;
+}
+
+.contact-list-item .checkbox {
+  @apply checkbox checkbox-primary;
+}
+
+.contact-list-item span {
+  @apply text-sm font-medium;
+}
+
+/* Ensure list container has proper spacing */
+.contact-list-container {
+  @apply space-y-2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .contact-list-item {
+    @apply flex-col items-start space-y-2 p-3;
+  }
+  .contact-list-item .contact-actions {
+    @apply w-full justify-end;
+  }
+}
